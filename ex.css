@@ -1,0 +1,136 @@
+/* Base styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body, h2, p, a {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header .navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    background-color: #ebffff;
+    display: flex;
+    box-shadow: 2px 1px 10px #888888;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+.nav-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative;
+    /* Smooth transition for hover and active */
+}
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #4CAF50; /* Green color */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+/* Main content styles */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1280px; /* or any other max-width you prefer */
+}
+
+.service-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    height: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.service-item p{
+    font-size: 1.15em;
+    color: #333;
+    font-weight: bold;
+}
+.special-heading {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+    padding: 5px; /* Adjust the padding to control the size of the highlight */
+    display: inline-block; /* This makes the background highlight only as wide as the text */
+}
+
+.special-heading::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Adjust the position as needed */
+    left: 50%;
+    width: 100%; /* This should be the full width of the element */
+    height: 100%; /* This should be the full height of the element */
+    background-color: rgba(0, 132, 255, 0.1); /* Light blue background, adjust color and opacity as needed */
+    z-index: -1;
+    transform: translate(-50%, -50%); /* Center the highlight behind the text */
+    border-radius: 4px; /* Adjust for rounded corners if desired */
+}
+.special-heading .highlight {
+    background-color: #4CAF50; /* Choose a color for the highlight */
+    color: white; /* Choose a text color that stands out from the highlight */
+    padding: 0.2em 0.4em; /* Add some padding around the text */
+    border-radius: 4px; /* Optional: adds rounded corners to the highlight */
+    box-decoration-break: clone; /* This ensures the background extends to each line of text */
+}
+
+/* Continue with the rest of your styles... */
+
+.btn {
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #003366;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 90%;
+        margin: 10px 0; /* Adjust space between items */
+    }
+}

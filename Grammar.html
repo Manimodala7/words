@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Writing Tool</title>
+    <link rel="icon" type="image/x-icon" href="icon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <img src="logo.png" alt="Logo" class="logo"> <!-- Replace with your logo path -->
+                <button id="dropdown-toggle" class="dropdown-toggle">☰</button> <!-- Dropdown toggle button -->
+                <div class="menu" id="dropdown-menu">
+                    <a href="index.html" class="menu-item">All</a> <!-- Added Home option -->
+                    <a href="text.html" class="menu-item">Text</a>
+                    <a href="writex.html" class="menu-item">Writex</a>
+                    <a href="Grammar.html" class="menu-item">Grammar</a>
+                    <a href="Tonality.html" class="menu-item">Tonality</a>
+                    <a href="Q.html" class="menu-item">Q & A</a>
+                    <a href="cmd.html" class="menu-item">Command</a>
+                    <a href="grp.html" class="menu-item">About Us</a> <!-- Added About Us option -->
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <fieldset>
+                    <legend>Input & Options</legend>
+                    <form id="toolForm">
+                        <textarea id="userInput" placeholder="Enter your text here..." maxlength="8000" maxwidth="100"></textarea>
+                        <br>
+
+                        <label for="taskSelect">Choose a task:</label>
+                        <select id="taskSelect">
+                            <option value="">Select an Option</option>
+                            <option value="spellcheck">Spelling Check</option>
+                            <option value="continue">Continue text</option>
+                        </select>
+                        <br>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </fieldset>
+            </section>
+
+            <section class="output-section">
+                <fieldset>
+                    <legend>Output</legend>
+                    <div id="output"></div>
+                </fieldset>
+            </section>
+        </main>
+
+        
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

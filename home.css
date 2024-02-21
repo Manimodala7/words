@@ -1,0 +1,135 @@
+/* Base styles */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Page background color */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ebffff; /* Navbar background color */
+    box-shadow: 2px 1px 10px #888888; /* Navbar shadow */
+}
+
+.logo {
+    height: 50px; /* Adjust based on the size of your logo */
+}
+/* ... rest of your styles ... */
+
+.login-button, .login-button:link, .login-button:visited {
+    padding: 10px 20px;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Allow padding and dimensions */
+}
+
+.login-button:hover, .login-button:active {
+    background-color: #0056b3;
+}
+
+.try-button {
+    padding: 10px 20px;
+    background-color: #00c853; /* Button background color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block;
+    font-size: larger;
+    transition: all 0.1s ease-in-out; /* Smooth transition for button press */
+    box-shadow: 0 4px #366633;
+}
+
+.try-button:hover {
+    background-color: #009624; /* Button hover effect */
+}
+.try-button:active {
+    box-shadow: 0 1px #366633; /* Reduce shadow to give "pressed in" effect */
+    transform: translateY(3px); /* Move button down to mimic pressing */
+}
+/* Main content styles */
+main {
+    display: flex;
+    align-items: center; /* Vertically center the child elements */
+    justify-content: center; /* Horizontally center the child elements */
+    margin-top: 70px; /* Add margin to top to push the content below the navbar */
+    padding: 0 10px; /* Horizontal padding */
+}
+
+.video-container {
+    width: 50%; /* Half the width of the main container */
+    display: flex;
+    justify-content: center; /* Center video horizontally */
+    align-items: center; /* Center video vertically */
+    padding: 10px; /* Padding around the video */
+}
+
+.image {
+    max-width: 100%; /* Ensure it does not exceed the container width */
+    max-height: 60vh; /* Adjust the video height as needed */
+    object-fit: contain; /* Contain the video within its container */
+}
+
+.content-container {
+    width: 50%; /* Half the width of the main container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center text vertically */
+    align-items: flex-start; /* Align text to the start (left) */
+    padding: 20px; /* Padding inside the text container */
+}
+
+h1, p, .try-button {
+    margin-bottom: 20px; /* Margin below each text element */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .video-container, .content-container {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .image {
+        max-height: 40vh; /* Smaller height for the image on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-button, .try-button {
+        width: 100%; /* Full width buttons on smaller screens */
+    }
+
+    .image {
+        max-height: 30vh; /* Even smaller height for the image on very small screens */
+    }
+
+    .content-container {
+        align-items: center; /* Center align text on very small screens */
+        text-align: center;
+    }
+}
