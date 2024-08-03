@@ -1,0 +1,234 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    background-image: url('wp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+}
+
+/* Header and Taskbar Styling */
+header {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ebffff; /* Light gray header */
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: space-between;
+    box-shadow: 2px 1px 10px #888888;
+}
+.navbar {
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    height: 50px; /* Logo size */
+}
+
+.menu-item {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+/* Hover effect for menu items */
+.menu-item::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #4CAF50; /* Green color */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-item:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+/* Other styles... */
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transition for hover and active */
+    box-shadow: 0 1px #366633; /* Reduce shadow to give "pressed in" effect */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Lighter green on hover */
+}
+
+button[type="submit"]:active {
+    box-shadow: 0 1px #366633; /* Reduce shadow to give "pressed in" effect */
+    transform: translateY(3px); /* Move down by 3px when pressed */
+}
+
+/* Other styles... */
+
+
+/* Main Content and Fieldset Styling */
+main {
+    flex: 1;
+    width: 90%;
+    max-width: 600px; /* Max width for the form and output */
+}
+
+.input-section fieldset, .output-section fieldset {
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #c7c7c7;
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+legend {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+textarea, select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+#languageSelect {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    /* Add any other specific styles you need */
+}
+
+#submitLanguage {
+    background-color: #008CBA; /* Different color for language action */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transition for hover and active */
+    /* Rest of the styles can be similar to the submit button */
+}
+
+#submitLanguage:hover {
+    background-color: #007B9E; /* Lighter color on hover */
+}
+
+#submitLanguage:active {
+    /* Similar effects as the submit button */
+    transform: translateY(3px); /* Move down by 3px when pressed */
+}
+
+/* Output Div Styling */
+#output {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    min-height: 200px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    /* Adjust the main container width to 100% */
+    main {
+        width: 100%;
+    }
+}
+/* Dropdown toggle button */
+.dropdown-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Dropdown menu styles */
+#dropdown-menu {
+    display: flex;
+}
+
+@media (max-width: 640px) {
+    /* Hide the regular menu and show the dropdown toggle button */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        right: 0;
+        top: 60px; /* Adjust based on the header's height */
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        display: block;
+    }
+    /* ... existing styles ... */
+    #dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px; /* Adjust based on the header's height */
+        right: 0; /* Position to the right */
+        width: 250px; /* Fixed width for the dropdown */
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    /* Show dropdown menu when it's active */
+    #dropdown-menu.active {
+        transform: translateX(0);
+    }
+    .menu-item {
+        display: block;
+        padding: 10px 20px;
+        text-align: left;
+    }
+
+    /* Hover effect for dropdown menu items */
+    .menu-item:hover {
+        background-color: #818181;
+    }
+    .input-section, .output-section {
+        padding-left: 10px;
+        padding-right: 10px;
+        }
+}

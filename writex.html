@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Writing Tool</title>
+    <link rel="icon" type="image/x-icon" href="icon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <img src="logo.png" alt="Logo" class="logo"> <!-- Replace with your logo path -->
+                <button id="dropdown-toggle" class="dropdown-toggle">☰</button> <!-- Dropdown toggle button -->
+                
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <fieldset>
+                    <legend>Input & Options</legend>
+                    <form id="toolForm">
+                        <textarea id="userInput" placeholder="Enter your text here..." maxlength="8000" maxwidth="100"></textarea>
+                        <br>
+
+                        <label for="taskSelect">Choose a task:</label>
+                        <select id="taskSelect">
+                            <option value="">Select an Option</option>
+                            <option value="improve">Improve Writing</option>
+                            <option value="summarize">Summarize</option>
+                            <option value="explain">Explanation</option>
+                            <option value="simplify">Simplify</option>
+                            <option value="translate">Translation</option>
+                            <option value="detect">Language Detection</option>
+                            <option value="sentiment">Sentiment Analysis</option>
+                            <option value="sarcasm">Sarcasm Detection</option>
+                            <option value="spellcheck">Spelling Check</option>
+                            <option value="continue">Continue text</option>
+                            <option value="paraphrase">Paraphrase</option>
+                            <option value="shorten">Shorten Text</option>
+                            <option value="lengthen">Lengthen Text</option>
+                            <option value="action_items">Important points</option>
+                            <option value="QA">Question & Answer</option>
+                            <option value="cp">Command Prompting</option>                     
+                           </select>
+                        <br>
+                        <label for="languageSelect">Choose a Language:</label>
+                        <select id="languageSelect">
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option><!-- Add other languages as needed --> 
+                            <option value="te">Telugu</option>
+                            <option value="hi">Hindi</option>
+                            <option value="ml">Malayalam</option>
+                            <option value="ta">Tamil</option>
+                            <option value="de">German</option>
+                            <option value="ru">Russian</option><!-- Add other languages as needed -->                           
+                          
+                        </select>
+                        <br>
+                        <button type="submit">Submit</button>
+                        <button type="button" id="submitLanguage">Submit for Language</button>
+                    </form>
+                </fieldset>
+            </section>
+
+            <section class="output-section">
+                <fieldset>
+                    <legend>Output</legend>
+                    <div id="output"></div>
+                </fieldset>
+            </section>
+        </main>
+
+        
+    </div>
+
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
